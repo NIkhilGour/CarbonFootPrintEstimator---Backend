@@ -18,7 +18,8 @@ WORKDIR /app
 
 
 # ✅ Copy the built JAR from the build stage
-COPY --from=build /app/target/CarbonPrintAnalyzer.jar analyzer.jar
+COPY --from=build /app/target/*.jar analyzer.jar
+
 
 # Run the app
 ENTRYPOINT ["java", "-jar", "analyzer.jar"]
