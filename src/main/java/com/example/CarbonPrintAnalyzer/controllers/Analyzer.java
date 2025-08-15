@@ -15,6 +15,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("estimate")
+@CrossOrigin
 public class Analyzer {
     @Autowired
     AnalyzerService analyzerService;
